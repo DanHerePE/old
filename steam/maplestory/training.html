@@ -1,0 +1,35 @@
+<html>
+  
+<script>
+  
+  function MapleStory_TrainingRecommendations() {
+    var RecommendedSpots = "";
+    var UserLevel = document.getElementById("_UserLevel").value;
+    
+    if(UserLevel >= 0 & UserLevel <= 10) {
+      RecommendedSpots + "\nLv.1 Tutorial or Job Specific Quests";
+          if(UserLevel >= 10 & UserLevel <= 15) {
+              RecommendedSpots + "\nLv.10 Green Mushroom → Henesys: Spore Hill";
+                  if(UserLevel >= 15 & UserLevel <= 20) {
+                      RecommendedSpots + "\nLv.15 Stone Golem → Henesys: Golem’s Temple Entrance";
+                         if(UserLevel >= 20 & UserLevel <= 30) {
+                            RecommendedSpots + "\nLv.19 Flaming Mixed Golem → Henesys: Golem Temple 3";
+                            document.getElementById("_RecommendedSpots").innerHTML = RecommendedSpots;
+                         }
+                  }
+          }
+    }
+    
+  }
+  
+</script>
+
+<body>
+  
+    <input type="text" value="Your Level" id="_UserLevel" name="_UserLevel" />
+    <input type="button" value="See Recommend List" onclick="MapleStory_TrainingRecommendations()" />
+    <p id="_RecommendedSpots" name="_RecommendedSpots"></p>
+
+</body>
+  
+</html>
