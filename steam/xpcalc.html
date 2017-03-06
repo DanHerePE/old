@@ -2,21 +2,21 @@
   
 <script>
   
-  function func1() {
-    var val2 = 0;
-    var val1 = document.getElementById("inp1").value;
+  function XPcalc() {
+    var XPneeded = 0;
+    var XPuser = document.getElementById("userXP").value;
      
-    val2 = val1 + 1;
-    document.getElementById("val3").innerHTML = val2;
+    XPneeded = ((300000)-(XPuser));
+    document.getElementById("XPoutput").innerHTML = XPneeded + " XP needed to get to Level 240";
   }
   
 </script>
 
 <body>
   
-    <input type="text" id="inp1" name="inp1" />
-    <input type="button" value="calculate" onclick="func1()" />
-    <p>Output : </p><p id="val3" name="val3"></p>
+    <input type="text" value="Your currunt XP Here" id="userXP" name="userXP" />
+    <input type="button" value="calculate" onclick="XPcalc()" />
+    <p id="XPoutput" name="XPoutput"></p>
 
 </body>
   
